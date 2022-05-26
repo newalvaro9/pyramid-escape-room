@@ -1,0 +1,77 @@
+.cs {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.cartel {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;                  
+    height: auto;
+    width: 50%;
+}
+
+@media (min-width: 1200px) {
+    .titulo h1 {
+        text-align: center;
+        font-size: 43px;
+        color: black
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .titulo h1 {
+        text-align: center;
+        font-size: 36px;
+        color: black
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .titulo h1 {
+        text-align: center;
+        font-size: 27px;
+        color: black
+    }
+}
+
+@media (min-width: 535px) and (max-width: 767px) {
+    .titulo h1 {
+        text-align: center;
+        font-size: 20px;
+        color: black
+    }
+}
+
+@media (min-width: 360px) and (max-width: 535px) {
+    .titulo h1 {
+        text-align: center;
+        font-size: 13px;
+        color: black
+    }
+}
+
+@media (min-width: 260px) and (max-width: 360px) {
+    .titulo h1 {
+        text-align: center;
+        font-size: 10px;
+        color: black
+    }
+}
+
+@media (min-width: 10px) and (max-width: 260px) {
+    .titulo h1 {
+        text-align: center;
+        font-size: 6px;
+        color: black
+    }
+}

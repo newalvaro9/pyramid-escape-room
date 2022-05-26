@@ -1,0 +1,28 @@
+.ct-footer {
+    background-color: #252525;
+    color: #fff;
+    padding: 2rem 0;
+    font-family: 'Arial';
+    font-size: 23px;
+    left: 0;
+    bottom: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    flex-wrap: wrap;
+}
+
+li {
+    display: inline;
+    padding: 15px;
+}
+
+.logo-footer {
+    width: 50%;
+    height: auto;
+}
+
+.alinear-verticalmente-inside-div {
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "pyramid-escape-room",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "client-i": "cd client && npm install",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client"
+  },
+  "author": "",
+  "devDependencies": {
+    "nodemon": "^1.14.6"
+  },
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.16.2",
+    "mongoose": "^6.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newalvaro9/pyramid-escape-room.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newalvaro9/pyramid-escape-room/issues"
+  },
+  "homepage": "https://github.com/newalvaro9/pyramid-escape-room#readme",
+  "description": ""
+}

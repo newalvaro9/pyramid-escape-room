@@ -1,0 +1,44 @@
+body {
+    background-color: #877d6c;
+    background-image: url("/public/images/debris.png");
+
+}
+
+.confeti {
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index:1000;
+    background-image: url("/public/images/confeti.gif");
+}
+/* SCROLL BAR */
+
+body::-webkit-scrollbar {
+    width: 20px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #f5cc91;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(231, 122, 107);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #f5cc91;  /* creates padding around scroll thumb */
+}
+
+.ctr {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.sebas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+

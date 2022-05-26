@@ -1,0 +1,329 @@
+.add-more-mates {
+    width: 10%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* FINAL */
+#top td, th {
+    border: 1px solid #bbb; 
+    text-align: left;
+    padding: 8px;
+    white-space: nowrap;
+}
+#top table {
+    font-family: arial, sans-serif;
+    border-collapse: separate;
+    border-spacing: 1px 1px;
+    width: 100%;
+    color: white;
+    border-radius: 1em;
+}
+
+.clasificacion {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#top .card {
+    border: none;
+    border-radius: 15px;
+}
+
+#top .card-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    background-color: #212020;
+    border: none;
+    border-radius: 15px 15px 0 0;
+}
+
+#top .card-title {
+    vertical-align: middle;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#top .card-body {
+    background-color: #363535;
+    border: none;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Rounded Corners  */
+#top tr:first-child td:first-child { border-top-left-radius: 10px; }
+#top tr:first-child td:last-child { border-top-right-radius: 10px; }
+#top tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+#top tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
+#top tr:first-child th:first-child { border-top-left-radius: 10px; }
+#top tr:first-child th:last-child { border-top-right-radius: 10px; }
+#top tr:last-child th:first-child { border-bottom-left-radius: 10px; }
+#top tr:last-child th:last-child { border-bottom-right-radius: 10px; }
+
+
+/* Info.jsx */
+.not-allowed {cursor: not-allowed!important;}
+
+.textos {
+    position: relative; 
+    padding: 10px;
+    background-color: #fbdbb7;
+    border-radius: 20px;
+    text-align: justify;
+    width: auto;   
+    height: auto;
+    font-size: 20px;
+}
+
+.skipbutton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+}
+
+/* Next Challenge */
+.cajaSiguiente {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;  
+}
+
+.portal {
+    height: 100%;
+    width: auto
+}
+
+.flecha {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    width: 17%;
+    height: auto
+}
+
+/* Errors */
+.alert {
+    padding: 20px;
+    background-color: #CB473D;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+/* Rest */
+.custominput {
+    background-color: #f6f2ed !important;
+    border-color: #f6f2ed !important;
+    border: none;
+    border-radius: 10px;
+}
+
+.input-info {
+    background-color: #fbdbb7;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+    background-color: #dbab70 !important;
+    border-color: #dbab70 !important;
+}
+
+.btn-custom-css {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+
+/* Sopa de letras */
+.imagensopa {
+    display: block;
+    width: 75%;
+    height: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+}
+
+.whattodo p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px !important;
+    text-align: center;
+    background-color: #f8cc94;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding-left: 7px;
+    padding-right: 7px;
+    width: fit-content;
+}
+
+.respuestas {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px 20px;
+    background-color: #fbdbb7;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.secres {
+    background-color: #fbdbb7;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.cajade {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imagenjero {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: auto;
+    border: 2px solid black;
+
+}
+
+.imagennum {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
+    border: 2px solid black;
+}
+
+.caja4prueba {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+
+/*  Crucigrama  */
+.crossword {
+    border-collapse: collapse;
+    font-family: "Courier New", Courier, monospace;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    margin-top: 0px;
+    margin-bottom: 10pt;
+
+}
+
+.crossword td {
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+    width: 30px !important;
+    height: 30px !important;
+    display: table-cell !important;
+    vertical-align: inherit !important;
+}
+
+.crossword .b {
+    background-color: #fcfcfc;
+    -moz-box-shadow: 2px 2px 2px #535353;
+    -webkit-box-shadow: 2px 2px 2px #535353;
+    box-shadow: 2px 2px 2px #535353;
+    border: 1px solid black;
+}
+
+.od {
+    position: relative !important;
+    font-size: 16 !important;
+    height: 100% !important;
+    width: 100% !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    border: none !important;
+}
+
+table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.number {
+    position: absolute;
+    font-size: 8pt;
+    margin: 0px;
+    line-height: 8pt;
+    font-weight: bold;
+    z-index: 99 !important;
+}
+
+/* Definiciones */
+
+.definiciones {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 10px 20px;
+}
+
+.across {
+    display: block;
+    border: 2px solid black;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 15px;
+    background-color: #ffedd8 !important;
+    border-color: #ffedd8 !important;
+}
+
+.down {
+    display: block;
+    border: 2px solid black;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 15px;
+    background-color: #ffedd8 !important;
+    border-color: #ffedd8 !important;
+}

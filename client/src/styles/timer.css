@@ -1,0 +1,35 @@
+.timerNum {
+    background-color: #f6f2ed !important;
+    border-color: #f6f2ed !important;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.timer {
+    position: fixed;
+    right: 25px;
+    top: 70px;
+}
+
+.timerNumB {
+    background-color: #f6f2ed !important;
+    border-color: #f6f2ed !important;
+    border: none;
+    border-radius: 60px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.btnxdas {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btnxdas:hover {
+    color: white;
+}
