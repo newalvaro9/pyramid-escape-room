@@ -20,7 +20,7 @@ export default function Footer() {
                         <div className="alinear-verticalmente-inside-div col-sm-6 col-md-5 col-lg-4 text-center ct-u-paddingTop10">
                             <ul>
                                 <li>
-                                    <a href="https://github.com/newalvaro9">Github</a>
+                                    <a href="https://github.com/newalvaro9/pyramid-escape-room">Github</a>
                                 </li>
                                 <li>
                                     |
