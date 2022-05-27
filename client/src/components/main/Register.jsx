@@ -8,14 +8,11 @@ export default function Register({ setShowch }) {
     
 
     function register() {
-        const namegroup = document.getElementById('useRefGroupName').value;
-        const teammate1 = document.getElementById('useRefTeammate1').value;
-        const teammate2 = document.getElementById('useRefTeammate2').value || "no";
-        const teammate3 = document.getElementById('useRefTeammate3').value || "no";
-        const teammate4 = document.getElementById('useRefTeammate4').value || "no";
-        const teammate5 = document.getElementById('useRefTeammate5').value || "no";
-        const teammate6 = document.getElementById('useRefTeammate6').value || "no";
-
+        const namegroup = $('#useRefGroupName').val();
+        const teammate1 = $('#useRefTeammate1').val();
+        const teammate2 = $('#useRefTeammate2').val();
+        console.log(teammate2)
+       
         // obligatories
         if (!namegroup) {
             return setError('❌ ¡Escribe un nombre para tu grupo!')
@@ -23,21 +20,20 @@ export default function Register({ setShowch }) {
         if (!teammate1 || teammate1.length < 2) {
             return setError('❌ ¡Escribe el nombre de al menos un integrante!')
         }
-
         //optionals
-
-
+        
         setShowch("renderInfo")
     }
-    var num = 1
+    var in_num = 1
     // Add more teammates
     function newMate() {
+        let num = ++in_num
         if (num === 5) {
             $("#add-more-mates").attr('hidden', '')
             $("#newDivs").append(
                 `<div class="input-info">
-                <p style="margin-bottom: 5px;">Integrante ${++num} (Nombre y apellidos)</p>
-                <input type="text" class="form-control" maxlength="100" required />
+                <p style="margin-bottom: 5px;">Integrante ${num} (Nombre y apellidos)</p>
+                <input type="text" id="useRefTeammate${num}" class="form-control" maxlength="100" required />
                 </div>
                 <br />`
             );
@@ -45,8 +41,8 @@ export default function Register({ setShowch }) {
         }
         $("#newDivs").append(
             `<div class="input-info">
-            <p style="margin-bottom: 5px;">Integrante ${++num} (Nombre y apellidos)</p>
-            <input type="text" class="form-control" maxlength="100" required />
+            <p style="margin-bottom: 5px;">Integrante ${num} (Nombre y apellidos)</p>
+            <input type="text" id="useRefTeammate${num}" class="form-control" maxlength="100" required />
             </div>
             <br />`
         );
