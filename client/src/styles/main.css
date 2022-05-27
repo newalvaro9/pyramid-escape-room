@@ -1,18 +1,25 @@
+.new-mates-and-reg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .add-more-mates {
-    width: 10%;
+    width: 4%;
     height: auto;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 
 /* FINAL */
-#top td, th {
-    border: 1px solid #bbb; 
+#top td,
+th {
+    border: 1px solid #bbb;
     text-align: left;
     padding: 8px;
     white-space: nowrap;
 }
+
 #top table {
     font-family: arial, sans-serif;
     border-collapse: separate;
@@ -56,27 +63,51 @@
 }
 
 /* Rounded Corners  */
-#top tr:first-child td:first-child { border-top-left-radius: 10px; }
-#top tr:first-child td:last-child { border-top-right-radius: 10px; }
-#top tr:last-child td:first-child { border-bottom-left-radius: 10px; }
-#top tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+#top tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+}
 
-#top tr:first-child th:first-child { border-top-left-radius: 10px; }
-#top tr:first-child th:last-child { border-top-right-radius: 10px; }
-#top tr:last-child th:first-child { border-bottom-left-radius: 10px; }
-#top tr:last-child th:last-child { border-bottom-right-radius: 10px; }
+#top tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+}
+
+#top tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+#top tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+#top tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+#top tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+#top tr:last-child th:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+#top tr:last-child th:last-child {
+    border-bottom-right-radius: 10px;
+}
 
 
 /* Info.jsx */
-.not-allowed {cursor: not-allowed!important;}
+.not-allowed {
+    cursor: not-allowed !important;
+}
 
 .textos {
-    position: relative; 
+    position: relative;
     padding: 10px;
     background-color: #fbdbb7;
     border-radius: 20px;
     text-align: justify;
-    width: auto;   
+    width: auto;
     height: auto;
     font-size: 20px;
 }
@@ -92,7 +123,7 @@
 .cajaSiguiente {
     margin-top: auto;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
 }
 
 .portal {

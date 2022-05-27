@@ -9,7 +9,7 @@ export default function Register({ setShowch }) {
     var num = 2
 
     function newMate() {
-        if(num === 5) {
+        if (num === 5) {
             $("#add-more-mates").attr('hidden', '')
             $("#newDivs").append(
                 `<div class="input-info">
@@ -55,17 +55,11 @@ export default function Register({ setShowch }) {
                 </div>
                 <br />
             </div>
-
-            <input id="add-more-mates" className="add-more-mates" type="image" src="/images/mas.png" onClick={newMate}></input>
-            <br/>
-            <button
-                className="btn btn-primary btn-custom-css btn-block btn-lg"
-                type="button"
-                onClick={register}
-            >
-                Registrarme
-            </button>
-            <br />
+            <div className="new-mates-and-reg">
+                <input id="add-more-mates" className="add-more-mates" type="image" src="/images/mas.png" onClick={newMate}></input>
+                <button className="btn btn-primary register-btn btn-custom-css" type="button" onClick={register}>Registrarme</button>
+                <br />
+            </div>
         </>
     )
 }
