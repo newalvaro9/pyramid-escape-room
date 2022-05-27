@@ -1,11 +1,15 @@
 .new-mates-and-reg {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.red-color {
+    color: red
+}
+
 .add-more-mates {
+    display: block;
     width: 4%;
     height: auto;
 }
