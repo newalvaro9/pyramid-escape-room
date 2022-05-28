@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Timer({setShowch, timeRemaining, setTimeRemaining}) {
+export default function Timer({setShowch, timeRemaining, setTimeRemaining, stop}) {
 
     var countDownDate = new Date().getTime() + timeRemaining; //Add 15 mins to current time
     let pause = false
@@ -19,6 +19,8 @@ export default function Timer({setShowch, timeRemaining, setTimeRemaining}) {
 
 
     var countdownfunction = setInterval(function () {
+
+        if(stop) return
 
         if (pause) return 
 
@@ -45,13 +47,13 @@ export default function Timer({setShowch, timeRemaining, setTimeRemaining}) {
     return (
         <>
             <div class="timer">
-                <div class="timerNum">
-                    <p class="">Tiempo restante:</p>
-                    <p class="" id="countdown1"></p>
+                <div className="timerNum">
+                    <p className="">Tiempo restante:</p>
+                    <p id="countdown1"></p>
                 </div>
                 <br />
                 <div class="timerNum" id="reset">
-                    <span onClick={resetAproposito} class="btnxdas">Reiniciar</span>
+                    <span onClick={resetAproposito} className="btnxdas">Reiniciar</span>
                 </div>
             </div>
         </>
