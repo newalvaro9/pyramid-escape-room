@@ -72,10 +72,6 @@ export default function Register({ setShowch }) {
     }
 
     function delMate() {
-        $('#newDivs div:last').remove();
-        $('#newDivs br:last').remove();
-
-        --in_num;
         if (in_num === 1) {
             $("#del-mates").attr('disabled', '') // Disabling bcs there's no more to delete
 
@@ -83,6 +79,9 @@ export default function Register({ setShowch }) {
             $('#newDivs br:last').remove();
             return false
         }
+        --in_num;
+        $('#newDivs div:last').remove();
+        $('#newDivs br:last').remove();
         $("#add-mates").removeAttr('disabled'); // Able bcs now we can add more
     }
 
@@ -91,7 +90,7 @@ export default function Register({ setShowch }) {
             <div className="cs">
                 <img className="cartel" src="/images/cartel.png"></img>
                 <div className="titulo tryrwe centered">
-                    <h1>Pyramid Escape Room</h1>
+                    <h1>Registrar tu resultado</h1>
                 </div>
             </div>
             <br />
