@@ -3,7 +3,7 @@ import $, { isEmptyObject } from "jquery"
 import Errors from "../Errors";
 import axios from "axios";
 
-export default function Register({ setShowch }) {
+export default function Register({ setShowch, setRegistered, timeRemaining }) {
     const [error, setError] = useState();
 
 
@@ -26,6 +26,7 @@ export default function Register({ setShowch }) {
         }
         axios.post('http://localhost:5000/saveGroup', {
             name: namegroup,
+            time: timeRemaining,
             mate1: teammate1,
             mate2: teammate2,
             mate3: teammate3,
@@ -37,7 +38,8 @@ export default function Register({ setShowch }) {
                 setError('❌ ¡El nombre del grupo ya existe!')
             }
             if(response.data.code == 201) {
-                setShowch("renderInfo")
+                setRegistered(true)
+                setShowch("renderFinal")
             }
         }).catch(function (error) {
             setError('❌ ¡Ha ocurrido un error inesperado!     ' + error)
