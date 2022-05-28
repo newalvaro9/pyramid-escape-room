@@ -17,45 +17,46 @@ import PassedThird from "./components/success/PassedThird.jsx";
 import Final from "./components/success/Final.jsx";
 
 export function App() {
-  const [showch, setShowch] = useState("renderStart") 
+  const [showch, setShowch] = useState("renderStart")
   const [timeRemaining, setTimeRemaining] = useState(902000)
 
-  
-  
-  switch(showch) { // Render challenges
-    case "renderStart":
-      return(<><Register setShowch={setShowch}/></>)
 
-    case "renderRegister":
-      return(<><Register setShowch={setShowch}/></>)
+
+  switch (showch) { // Render challenges
+    case "renderStart":
+      return (<><Main setShowch={setShowch} /></>)
 
     case "renderInfo":
-      return(<><Info setTimeRemaining={setTimeRemaining} setShowch={setShowch}/></>)
+      return (<><Info setTimeRemaining={setTimeRemaining} setShowch={setShowch} /></>)
 
     case "renderFirst":
-      return(<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining}/> <First setShowch={setShowch}/></>)
-    
+      return (<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} /> <First setShowch={setShowch} /></>)
+
     case "nextSecond":
-      return(<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining}/> <PassedFirst setShowch={setShowch}/></>)
-    
+      return (<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} /> <PassedFirst setShowch={setShowch} /></>)
+
     case "renderSecond":
-      return(<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining}/> <Second setShowch={setShowch}/></>)
+      return (<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} /> <Second setShowch={setShowch} /></>)
 
     case "nextThird":
-      return(<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining}/> <PassedSecond setShowch={setShowch}/></>)
+      return (<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} /> <PassedSecond setShowch={setShowch} /></>)
 
     case "renderThird":
-      return(<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining}/> <Third setShowch={setShowch}/></>)
+      return (<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} /> <Third setShowch={setShowch} /></>)
 
     case "nextForth":
-      return(<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining}/> <PassedThird setShowch={setShowch}/></>)
+      return (<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} /> <PassedThird setShowch={setShowch} /></>)
 
     case "renderForth":
-      return(<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining}/> <Forth setShowch={setShowch}/></>)
+      return (<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} /> <Forth setShowch={setShowch} /></>)
 
     case "renderFinal":
-      return(<Final/>)
+      return (<Final />)
+      
+    case "renderRegister":
+      return (<><Register setShowch={setShowch} /></>)
+
     case "resetFAIL":
-      return(<Reset setShowch={setShowch}/>)
+      return (<Reset setShowch={setShowch} />)
   }
 }
