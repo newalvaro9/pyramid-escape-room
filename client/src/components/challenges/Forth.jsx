@@ -2,7 +2,7 @@ import React, { Fragment, useState, useRef } from "react";
 import Errors from "../Errors";
 import $ from "jquery"
 
-export default function Forth({ setShowch }) {
+export default function Forth({ setShowch, setStop }) {
     const [error, setError] = useState();
 
     const useRefxy18 = useRef();
@@ -154,11 +154,19 @@ export default function Forth({ setShowch }) {
                 `❌ ¡Has puesto una letra mal!`
             )
         }
+        setStop(true)
+        setShowch("renderFinal")
+    }
+
+
+    function s() {
+        setStop(true)
         setShowch("renderFinal")
     }
 
     return (
-        <>
+        <>  
+        <button onClick={s}>sx</button>
             <div className="cs">
                 <img className="cartel" src="/images/cartel.png"></img>
                 <div className="titulo tryrwe centered">
