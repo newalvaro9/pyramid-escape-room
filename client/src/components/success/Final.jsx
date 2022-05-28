@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 import $ from "jquery"
 
-export default function Final() {
+export default function Final({setShowch}) {
+
+    function goRegister() {
+        setShowch("renderRegister")
+    }
 
     function final() {
         $("#div-confeti").addClass("confeti");
@@ -20,11 +24,16 @@ export default function Final() {
                         <h1>¡Has Escapado!</h1>
                     </div>
                 </div>
-                <br/>
+                <br />
                 <div className="clasificacion">
                     <div className="card">
                         <div className='card-header'>
-                            <h3 className='card-title'>Clasificación</h3>
+                            <div className='text-clasificacion'>
+                                <h3 className='card-title'>Clasificación</h3>
+                            </div>
+                            <div className='btn-rg-on-top'>
+                                <button className="btn btn-primary btn-rg-on-top" type="button" onClick={goRegister}>Registrarme</button>
+                            </div>
                         </div>
                         <div className='card-body' style={{ overflow: "auto" }}>
                             <table>
@@ -38,7 +47,7 @@ export default function Final() {
                                 </tr>
                                 <tr>
                                     <td>Professors 🤣</td>
-                                    <td>14:16 min.</td>                                  
+                                    <td>14:16 min.</td>
                                 </tr>
                                 <tr>
                                     <td>Fitipaldis</td>
@@ -48,7 +57,7 @@ export default function Final() {
                         </div>
                     </div>
                 </div>
-                <br/>
+                <br />
             </section>
         </>
     )
