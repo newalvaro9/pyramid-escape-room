@@ -1,14 +1,19 @@
-import React, { useEffect } from 'react';
-import $ from "jquery"
+import React, { useEffect, useState } from 'react';
+import $ from "jquery";
+import axios from 'axios';
 
 export default function Final({ setShowch, registered }) {
+    const [dataf, setDataf] = useState([])
 
     function goRegister() {
         setShowch("renderRegister")
     }
 
-    function final() {
+    async function final() {
         $("#div-confeti").addClass("confeti");
+        let response = await axios.get("http://localhost:5000/getCurrentTop?limit=10");
+        setDataf(response.data);
+
         if (registered) {
             $("#goRegister").hide()
         }
@@ -17,6 +22,15 @@ export default function Final({ setShowch, registered }) {
     useEffect(() => {
         final()
     }, [])
+    
+    console.log(dataf)
+
+    const millisToMinutesAndSeconds = (millis) => {
+        var minutes = Math.floor(millis / 60000);
+        var seconds = ((millis % 60000) / 1000).toFixed(0);
+        //If seconds is less than 10 put a zero in front.
+        return `${minutes}:${(seconds < 10 ? "0" : "")}${seconds}`;
+    }
 
     return (
         <>
@@ -40,23 +54,19 @@ export default function Final({ setShowch, registered }) {
                         </div>
                         <div className='card-body' style={{ overflow: "auto" }}>
                             <table>
-                                <tbody>
+                                <tbody id="table-body-top">
                                     <tr>
                                         <th>Nombre del grupo</th>
                                         <th>Tiempo</th>
                                     </tr>
-                                    <tr>
-                                        <td>AnnA Hompajarera</td>
-                                        <td>12:56 min.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Professors 🤣</td>
-                                        <td>14:16 min.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Fitipaldis</td>
-                                        <td>09:04 min.</td>
-                                    </tr>.y                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                    {
+                                        dataf.map(data =>
+                                            <tr>
+                                                <td>{data.groupName}</td>
+                                                <td>{millisToMinutesAndSeconds(data.timeToFinish)} min.</td>
+                                            </tr>
+                                        )}
+
                                 </tbody>
                             </table>
                         </div>
