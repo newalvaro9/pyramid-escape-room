@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
     if (!isOnDB) {  //Save to db
         await groupsDB.create({
             groupName: name,
-            timeToFinish: time,
+            timeToFinish: 900000 - time,
             isTime: true,
             mate1: mate1,
             mate2: mate2,
