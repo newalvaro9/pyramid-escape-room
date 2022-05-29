@@ -11,7 +11,6 @@ export default function Final({ setShowch, registered }) {
     }
 
     async function final() {
-        $("#div-confeti").addClass("confeti");
         let total = await axios.get(`http://localhost:5000/getCurrentTop`);
         setTotalDataf(total.data.length)
         let response = await axios.get("http://localhost:5000/getCurrentTop?from=0&to=10");
