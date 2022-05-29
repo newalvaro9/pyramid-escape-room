@@ -3,7 +3,7 @@
 
 ## What is the point of this project?
 Learning a language is not that difficult, what is difficult is to have an idea (obviously if you work you are plenty of things to do, but I can't work, I'm 15). So, when I finally found an opportunity to test what I know and to learn more I decided to make this app.<br>
-During the development time, I went very deep on `css` styling and api creatio, I also learned a new Library, `React.js`.
+During the development time, I went very deep on `css` styling and API creation, I also learned a new Library, `React.js`.
 
 
 ## Project History 
