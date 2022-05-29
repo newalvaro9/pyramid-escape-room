@@ -158,15 +158,8 @@ export default function Forth({ setShowch, setStop }) {
         setShowch("renderFinal")
     }
 
-
-    function s() {
-        setStop(true)
-        setShowch("renderFinal")
-    }
-
     return (
         <>  
-        <button onClick={s}>sx</button>
             <div className="cs">
                 <img className="cartel" src="/images/cartel.png"></img>
                 <div className="titulo tryrwe centered">
