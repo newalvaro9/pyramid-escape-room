@@ -1,3 +1,4 @@
+/* REGISTER */
 .new-mates-and-reg {
     width: 50%;
     display: flex;
@@ -29,7 +30,7 @@
     color: red
 }
 
-/* FINAL */
+/* CLASIFICACIÓN */
 #top td, th {
     border: 1px solid #bbb;
     text-align: left;
@@ -39,6 +40,10 @@
 
 .rank {
     width: 9%;
+}
+
+.default-cursor {
+    cursor: default;
 }
 
 #top table {
