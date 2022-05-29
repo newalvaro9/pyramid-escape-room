@@ -5,10 +5,6 @@
 
 ## Code Info
 
-### Author
-
-- [Álvaro Poblador](https://github.com/newalvaro9/)
-
 ### What is the point of this project?
 Learning a language is not that difficult, what is difficult is to have an idea (obviously if you work you are plenty of things to do, but I can't work, I'm 15). So, when I finally found an opportunity to test what I know and to learn more I decided to make this app.
 
@@ -24,5 +20,9 @@ During the development time, I went very deep on `css` styling and api creatio, 
 
 ### Pull requests
 - I'm not accepting any pull request, if you find bugs (idk why u searching bugs) send me an email to [vfxalv@gmail.com](mailto:vfxalv@gmail.com)
+
+### Author
+
+- [Álvaro Poblador](https://github.com/newalvaro9/)
 
 ### License
