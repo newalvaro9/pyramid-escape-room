@@ -101,12 +101,12 @@ export default function Register({ setShowch, setRegistered, timeRemaining }) {
 
             <div className="input-info">
                 <p style={{ "marginBottom": "5px" }}>Nombre del grupo <span className="red-color">*</span></p>
-                <input type="text" id="useRefGroupName" className="form-control" maxlength="50" required />
+                <input type="text" id="useRefGroupName" className="form-control" maxLength={50} required />
             </div>
             <br />
             <div className="input-info">
                 <p style={{ "marginBottom": "5px" }}>Integrante 1 (Nombre y apellidos) <span className="red-color">*</span></p>
-                <input type="text" id="useRefTeammate1" className="form-control" maxlength="50" required />
+                <input type="text" id="useRefTeammate1" className="form-control" maxLength={75} required />
             </div>
             <br />
             <div id="newDivs">
