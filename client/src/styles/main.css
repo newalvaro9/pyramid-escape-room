@@ -30,12 +30,15 @@
 }
 
 /* FINAL */
-#top td,
-th {
+#top td, th {
     border: 1px solid #bbb;
     text-align: left;
     padding: 8px;
     white-space: nowrap;
+}
+
+.rank {
+    width: 9%;
 }
 
 #top table {
@@ -59,7 +62,7 @@ th {
 
 #top .card-header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     color: white;
     background-color: #212020;
@@ -78,6 +81,26 @@ th {
     background-color: #363535;
     border: none;
     border-radius: 0 0 15px 15px;
+}
+
+.see-more-ctr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top .left {
+    padding-left: 5px;
+    width: 7%;
+}
+
+#top .right {
+    padding-left: 7px;
+    width: 7%;
+}
+
+.num-of-pages {
+    color: white;
 }
 
 /* Rounded Corners  */
