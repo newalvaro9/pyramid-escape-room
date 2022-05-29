@@ -41,6 +41,7 @@ export default function Second({ setShowch }) {
         <div className="fila1">
           <p style={{ marginBottom: "5px" }}>Introduce aquí la frase:</p>
           <input
+            autocomplete="off"
             type="text"
             ref={useReffrase}
             className="custominput form-control"

@@ -3,20 +3,20 @@ import Errors from "../Errors";
 
 export default function First({ setShowch }) {
   const [palabras, setPalabras] = useState([
-    "piramide",
-    "piramide",
-    "piramide",
-    "piramide",
-    "piramide",
-    "piramide",
-    "piramide",
-    "piramide",
-    "piramide",
-    "piramide",
-    "piramide",
-    "piramide",
-    "piramide",
-    "piramide",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
   ]);
 
   const [error, setError] = useState("");
@@ -109,6 +109,7 @@ const Palabra = ({ palabra, palabras, setPalabras, index }) => {
     <div className="fila1">
       <p style={{ marginBottom: "5px" }}>Palabra {index + 1} </p>
       <input
+        autocomplete="off"
         type="text"
         className="custominput"
         required

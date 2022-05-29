@@ -40,7 +40,7 @@ export default function Third({ setShowch }) {
             <div className="secres">
                 <div className="fila1">
                     <p style={{ marginBottom: "5px" }}>Introduce aquí el código:</p>
-                    <input type="text" ref={useRefCode} className="form-control custominput" required name="codigo" />
+                    <input type="text" ref={useRefCode} autocomplete="off" className="form-control custominput" required name="codigo" />
                 </div>
                 <br />
                 <div className="fila1">
