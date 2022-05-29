@@ -1,8 +1,13 @@
 import React, { Fragment } from "react"
 
-export default function Main({setShowch}) {
+export default function Main({setShowch, setRegistered}) {
     function goNextStart() {
         setShowch("renderInfo")
+    }
+    
+    function gotop() {
+        setRegistered(true)
+        setShowch("renderTop")
     }
     return (
         <>
@@ -15,7 +20,9 @@ export default function Main({setShowch}) {
             </div>
             <br/>
             <br/>
-            <button type="button" className="btn btn-primary btn-custom-css" onClick={goNextStart}>Ir al Escape Room</button>
+            <button type="button" className="btn btn-primary" onClick={goNextStart}>Ir al Escape Room</button>
+            <br/>
+            <button type="button" className="btn btn-primary" onClick={gotop}>Ver clasificación</button>
         </>
     )
 }
