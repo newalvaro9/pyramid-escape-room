@@ -19,11 +19,8 @@ export default function Timer({setShowch, timeRemaining, setTimeRemaining, stop}
 
 
     var countdownfunction = setInterval(function () {
-
-        if(stop) return
-
-        if (pause) return 
-
+        if(stop || pause) return
+        
         var now = new Date().getTime();
 
         var distance = countDownDate - now;
