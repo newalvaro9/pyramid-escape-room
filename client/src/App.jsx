@@ -19,6 +19,8 @@ import Final from "./components/success/Final.jsx";
 export function App() {
   const [showch, setShowch] = useState("renderStart")
   const [timeRemaining, setTimeRemaining] = useState(902000)
+  const [registered, setRegistered] = useState(false)
+  const [stop, setStop] = useState(false)
 
 
 
@@ -48,13 +50,13 @@ export function App() {
       return (<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} /> <PassedThird setShowch={setShowch} /></>)
 
     case "renderForth":
-      return (<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} /> <Forth setShowch={setShowch} /></>)
+      return (<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} stop={stop} /> <Forth setShowch={setShowch} setStop={setStop} /></>)
 
     case "renderFinal":
-      return (<Final />)
-      
+      return (<Final setShowch={setShowch} registered={registered}/>)
+
     case "renderRegister":
-      return (<><Register setShowch={setShowch} /></>)
+      return (<><Register timeRemaining={timeRemaining} setShowch={setShowch} setRegistered={setRegistered} /></>)
 
     case "resetFAIL":
       return (<Reset setShowch={setShowch} />)
