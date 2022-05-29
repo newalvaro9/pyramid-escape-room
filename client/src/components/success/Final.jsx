@@ -4,14 +4,17 @@ import axios from 'axios';
 
 export default function Final({ setShowch, registered }) {
     const [dataf, setDataf] = useState([])
-
+    const [totalDataf, setTotalDataf] = useState(0)
+    const [pageState, setPage] = useState(0)
     function goRegister() {
         setShowch("renderRegister")
     }
 
     async function final() {
         $("#div-confeti").addClass("confeti");
-        let response = await axios.get("http://localhost:5000/getCurrentTop?limit=10");
+        let total = await axios.get(`http://localhost:5000/getCurrentTop`);
+        setTotalDataf(total.data.length)
+        let response = await axios.get("http://localhost:5000/getCurrentTop?from=0&to=10");
         setDataf(response.data);
 
         if (registered) {
@@ -19,11 +22,29 @@ export default function Final({ setShowch, registered }) {
         }
     }
 
+    
+
+    async function goForward() {
+        if(pageState + 1 >= Math.ceil(totalDataf/10)) return //Firt Page
+        let page = pageState + 1
+        setPage(pageState + 1)
+        let response = await axios.get(`http://localhost:5000/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`);
+        console.log(`http://localhost:5000/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`)
+        setDataf(response.data);
+    }
+
+    async function goBack() {
+        if(pageState + 1 <= 1) return //Last Page
+        let page = pageState - 1
+        setPage(pageState - 1)
+        let response = await axios.get(`http://localhost:5000/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`);
+        console.log(`http://localhost:5000/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`)
+        setDataf(response.data);
+    }
+
     useEffect(() => {
         final()
     }, [])
-    
-    console.log(dataf)
 
     const millisToMinutesAndSeconds = (millis) => {
         var minutes = Math.floor(millis / 60000);
@@ -45,23 +66,22 @@ export default function Final({ setShowch, registered }) {
                 <div className="clasificacion">
                     <div className="card">
                         <div className='card-header'>
-                            <div className='text-clasificacion'>
-                                <h3 className='card-title'>Clasificación</h3>
-                            </div>
-                            <div className='btn-rg-on-top'>
-                                <button className="btn btn-primary btn-rg-on-top" id="goRegister" type="button" onClick={goRegister}>Registrarme</button>
-                            </div>
+                            <h3 className='card-title'>Clasificación</h3>
+                            <button className="btn btn-primary btn-rg-on-top" id="goRegister" type="button" onClick={goRegister}>Registrarme</button>
                         </div>
                         <div className='card-body' style={{ overflow: "auto" }}>
                             <table>
                                 <tbody id="table-body-top">
                                     <tr>
+
+                                        <th>Rango</th>
                                         <th>Nombre del grupo</th>
                                         <th>Tiempo</th>
                                     </tr>
                                     {
-                                        dataf.map(data =>
-                                            <tr>
+                                        dataf.map((data, index) =>
+                                            <tr key={data._id}>
+                                                <td className='rank'>#{pageState * 10 + index + 1}.</td>
                                                 <td>{data.groupName}</td>
                                                 <td>{millisToMinutesAndSeconds(data.timeToFinish)} min.</td>
                                             </tr>
@@ -69,6 +89,14 @@ export default function Final({ setShowch, registered }) {
 
                                 </tbody>
                             </table>
+                            <br />
+                            <div className="see-more-ctr">
+                                <div className='controls'>
+                                    <input type="image" id="left" className='left' src="/images/left.png" onClick={goBack}></input>
+                                    <input type="image" id="right" className='right' src="/images/right.png" onClick={goForward}></input>
+                                </div>
+                                <h5 className='num-of-pages'>{pageState + 1}/{Math.ceil(totalDataf/10)}</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
