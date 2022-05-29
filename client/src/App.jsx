@@ -15,6 +15,7 @@ import PassedFirst from "./components/success/PassedFirst.jsx";
 import PassedSecond from "./components/success/PassedSecond.jsx";
 import PassedThird from "./components/success/PassedThird.jsx";
 import Final from "./components/success/Final.jsx";
+import Top from "./components/success/Top.jsx"
 
 export function App() {
   const [showch, setShowch] = useState("renderStart")
@@ -26,7 +27,7 @@ export function App() {
 
   switch (showch) { // Render challenges
     case "renderStart":
-      return (<><Main setShowch={setShowch} /></>)
+      return (<><Main setShowch={setShowch} setRegistered={setRegistered} /></>)
 
     case "renderInfo":
       return (<><Info setTimeRemaining={setTimeRemaining} setShowch={setShowch} /></>)
@@ -53,7 +54,10 @@ export function App() {
       return (<><Timer setShowch={setShowch} timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} stop={stop} /> <Forth setShowch={setShowch} setStop={setStop} /></>)
 
     case "renderFinal":
-      return (<Final setShowch={setShowch} registered={registered}/>)
+      return (<Final setShowch={setShowch}/>)
+
+    case "renderTop": 
+      return (<Top setShowch={setShowch} registered={registered}/>)
 
     case "renderRegister":
       return (<><Register timeRemaining={timeRemaining} setShowch={setShowch} setRegistered={setRegistered} /></>)
