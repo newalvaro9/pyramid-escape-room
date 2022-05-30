@@ -19,8 +19,12 @@ During the development time, I went very deep on `css` styling and API creation,
 ### Pull requests
 - I'm not accepting any pull request, if you find bugs (idk why u searching bugs) send me an email to [vfxalv@gmail.com](mailto:vfxalv@gmail.com)
 
+### Run code
+- `concurrently "npm run server" "npm run client"`
+
 ### Author
 
 - [Álvaro Poblador](https://github.com/newalvaro9/)
 
 ### License
+- MIT License
