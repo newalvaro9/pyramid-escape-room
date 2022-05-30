@@ -20,14 +20,6 @@
     "express": "^4.16.2",
     "mongoose": "^6.3.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/newalvaro9/pyramid-escape-room.git"
-  },
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/newalvaro9/pyramid-escape-room/issues"
-  },
-  "homepage": "https://github.com/newalvaro9/pyramid-escape-room#readme",
   "description": ""
 }

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const groupsDB = require('./../database/models/groups.js')
+const groupsDB = require('../database/models/groups.js')
 
 router.post('/', async (req, res) => {
     const { name, mate1, mate2, mate3, mate4, mate5, mate6, time } = req.body;
