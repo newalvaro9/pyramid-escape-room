@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const groupsDB = require('./../database/models/groups.js')
+const groupsDB = require('/../../database/models/groups.js')
 
 router.get('/', async (req, res) => {
     console.log(req.query)

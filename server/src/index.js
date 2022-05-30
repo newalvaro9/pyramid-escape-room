@@ -1,6 +1,6 @@
 const app = require('express')()
 const cors = require('cors');
-require('./database/database.js')
+require('../database/database.js')
 
 
 app.use(cors({
