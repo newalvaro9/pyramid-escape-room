@@ -3,6 +3,9 @@ import $ from "jquery";
 
 export default function Final({ setShowch }) {
 
+    function gotop() {
+      setShowch("renderTop")
+    }
     async function final() {
         $("#div-confeti").addClass("confeti");
     }
@@ -20,6 +23,8 @@ export default function Final({ setShowch }) {
                 </div>
             </div>
             <br />
+            <button type="button" className="btn btn-primary" onClick={gotop}>Ver clasificación</button>
+
         </>
     )
 
