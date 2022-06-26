@@ -24,7 +24,7 @@ export default function Register({ setShowch, setRegistered, timeRemaining }) {
         if (!teammate1 || teammate1.length < 2) {
             return setError('❌ ¡Escribe el nombre de al menos un integrante!')
         }
-        axios.post('http://localhost:5000/saveGroup', {
+        axios.post('https://api.pyramidescape.tk/saveGroup', {
             name: namegroup,
             time: timeRemaining,
             mate1: teammate1,

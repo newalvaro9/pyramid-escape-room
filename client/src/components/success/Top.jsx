@@ -11,9 +11,10 @@ export default function Final({ setShowch, registered }) {
     }
 
     async function final() {
-        let total = await axios.get(`http://localhost:5000/getCurrentTop`);
+        let total = await axios.get(`https://api.pyramidescape.tk/getCurrentTop`);
+        console.log(total)
         setTotalDataf(total.data.length)
-        let response = await axios.get("http://localhost:5000/getCurrentTop?from=0&to=10");
+        let response = await axios.get("https://api.pyramidescape.tk/getCurrentTop?from=0&to=10");
         setDataf(response.data);
 
         if (registered) {
@@ -27,8 +28,9 @@ export default function Final({ setShowch, registered }) {
         if(pageState + 1 >= Math.ceil(totalDataf/10)) return //Firt Page
         let page = pageState + 1
         setPage(pageState + 1)
-        let response = await axios.get(`http://localhost:5000/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`);
-        console.log(`http://localhost:5000/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`)
+        let response = await axios.get(`https://api.pyramidescape.tk/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`);
+        console.log(response)
+        console.log(`https://api.pyramidescape.tk/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`)
         setDataf(response.data);
     }
 
@@ -36,8 +38,8 @@ export default function Final({ setShowch, registered }) {
         if(pageState + 1 <= 1) return //Last Page
         let page = pageState - 1
         setPage(pageState - 1)
-        let response = await axios.get(`http://localhost:5000/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`);
-        console.log(`http://localhost:5000/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`)
+        let response = await axios.get(`https://api.pyramidescape.tk/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`);
+        console.log(`https://api.pyramidescape.tk/getCurrentTop?from=${page * 10}&to=${page * 10 + 10}`)
         setDataf(response.data);
     }
 
