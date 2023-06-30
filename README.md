@@ -1,4 +1,5 @@
-Code broken - Updating to Nextjs 
+This project is not maintaned anymore
+
 # Pyramid Escape Room
 > Made this for a school project, then I decided to improve it.<br>What teacher said: Make a digital or irl Escape Room of any topic you want.
 
